@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-induction</title>
+</head>
+<body>
+
+<canvas id="demo1">
+    Your browser dose not support canvas .
+    please upgrade to the latest version.
+</canvas>
+<p>上面是一个canvas标签</p>
+
+<div id="demo2"></div>
+
+<script src="js/index.js"></script>
+<script src="js/clock.js"></script>
+<script>
+    var clock = new Clock('demo2');
+    clock.draw();
+</script>
+</body>
+</html>
