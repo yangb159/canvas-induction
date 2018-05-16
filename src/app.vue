@@ -1,23 +1,25 @@
 <template>
     <div>
-        <canvas id="myCanvas"></canvas>
+        <canvas id="myCanvas" width="500" height="500"></canvas>
     </div>
 </template>
 
 <script>
-    import {rect} from "./demos/basic";
+    import {rect, text, path} from "./demos/basic";
 
     export default {
         data() {
             return {
-                ctx: null
+                ctx: null,
             }
         },
         methods: {
             draw() {
                 let {ctx} = this;
                 rect(ctx);
-            }
+                text(ctx);
+                path(ctx);
+            },
         },
         created() {
 
