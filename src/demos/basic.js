@@ -21,6 +21,7 @@ export function text(ctx) {
 
     ctx.font = '35px Microsoft Yahei';
     ctx.textAlign = 'end';
+    ctx.textBaseline = 'baseline'
     ctx.direction = 'rtl'; //实验中的api，低版本浏览器不支持
     let text = ctx.measureText('Hello word!');
     console.log(text);
@@ -36,6 +37,8 @@ export function text(ctx) {
 export function path(ctx) {
     ctx.clearRect(0, 0, 500, 500);
     ctx.beginPath();
+    ctx.arc(75,75, 30, 0 , Math.PI * 1.3, true);
+
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
     ctx.moveTo(110, 75);
     ctx.arc(75, 75, 35, 0, Math.PI, false);   // 口(顺时针)
@@ -44,4 +47,6 @@ export function path(ctx) {
     ctx.moveTo(95, 65);
     ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
     ctx.stroke();
+
+
 }
